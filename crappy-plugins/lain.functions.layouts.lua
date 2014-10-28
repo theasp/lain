@@ -1,43 +1,46 @@
 local plugin = {}
 
-plugin.name = 'Lain Layout Functions'
-plugin.description = 'Layouts that are part of lain'
-plugin.id = 'lain.functions.layouts'
-plugin.requires = {"crappy.startup.theme"}
-plugin.provides = {"crappy.functions.layouts"}
-plugin.functions = {
-   ["lain.layout.cascade"] = {
-      class = "layout",
-      description = "Lain cascade layout",
-   },
-   ["lain.layout.cascadetile"] = {
-      class = "layout",
-      description = "Lain cascade tile layout",
-   },
-   ["lain.layout.centerfair"] = {
-      class = "layout",
-      description = "Lain center fair layout",
-   },
-   ["lain.layout.centerwork"] = {
-      class = "layout",
-      description = "Lain center work layout",
-   },
-   ["lain.layout.termfair"] = {
-      class = "layout",
-      description = "Lain term fair layout",
-   },
-   ["lain.layout.uselessfair"] = {
-      class = "layout",
-      description = "Lain useless fair layout",
-   },
-   ["lain.layout.uselesspiral"] = {
-      class = "layout",
-      description = "Lain useless spiral layout",
-   },
-   ["lain.layout.uselesstile"] = {
-      class = "layout",
-      description = "Lain useless tile layout",
-   },
+plugin = {
+   name = 'Lain Layout Functions',
+   description = 'Layouts that are part of lain',
+   id = 'lain.functions.layouts',
+   requires = {"crappy.startup.theme"},
+   provides = {"crappy.functions.layouts"},
+   options = {},
+   functions = {
+      ["lain.layout.cascade"] = {
+         class = "layout",
+         description = "Lain cascade layout",
+      },
+      ["lain.layout.cascadetile"] = {
+         class = "layout",
+         description = "Lain cascade tile layout",
+      },
+      ["lain.layout.centerfair"] = {
+         class = "layout",
+         description = "Lain center fair layout",
+      },
+      ["lain.layout.centerwork"] = {
+         class = "layout",
+         description = "Lain center work layout",
+      },
+      ["lain.layout.termfair"] = {
+         class = "layout",
+         description = "Lain term fair layout",
+      },
+      ["lain.layout.uselessfair"] = {
+         class = "layout",
+         description = "Lain useless fair layout",
+      },
+      ["lain.layout.uselesspiral"] = {
+         class = "layout",
+         description = "Lain useless spiral layout",
+      },
+      ["lain.layout.uselesstile"] = {
+         class = "layout",
+         description = "Lain useless tile layout",
+      },
+   }
 }
 
 function plugin.startup(awesomever, settings)
@@ -60,10 +63,6 @@ function plugin.startup(awesomever, settings)
    theme.layout_cascadetile = lain_icons .. "cascadetilew.png"
    theme.layout_centerwork = lain_icons .. "centerworkw.png"
    theme.layout_cascadebrowse = lain_icons .. "cascadebrowsew.png"
-end
-
-function plugin.buildUi(window, settings, log)
-   return nil
 end
 
 return plugin
